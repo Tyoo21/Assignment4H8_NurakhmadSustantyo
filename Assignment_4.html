@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Assignment-4</title>
+</head>
+<body style="background-color: lightsalmon;">
+    <section class="vh-100">
+        <div class="container py-5 px-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="card shadow-lg" id="list1" style="border-radius: .75rem; background-color: orange; box-shadow: #f0f8ff;">
+                    <div class="card-body py-4 px-4 px-md-5">
+                        <p class="h1 text-center mt-3 mb-4 pb-3 text">
+                            COVID-19 TRACKER
+                        </p>
+
+                        <div class="row">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="d-flex flex-row align-items-center">
+                                    <input type="text" class="form-control form-control-md" id="find-country" style="width: 20rem;" placeholder="Tulis negara yang diinginkan...">
+                                    <button type="button" class="btn btn-primary btn-control-md" style="margin-left: 15px; width: 5rem;" onclick="searchCountry()">Cari</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 d-flex justify-content-center align-items-center" data-title="Active-Cases">
+                                <div class="card h-90 mt-4 rounded align-items-center justify-content-center" style="width: 15rem; background-color: limegreen;">
+                                    <img src="images/active_case.png" class="align-items-center justify-content-center img-fluid pt-3" style="height: 100px; width: 100px;" alt="ini foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title pt-3" style="text-align: center;">Active Cases</h5>
+                                        <p class="card-text pt-3" style="text-align: center;" data-stat="active-cases">-</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center" data-title="New-Cases">
+                                <div class="card h-90 mt-4 rounded align-items-center justify-content-center" style="width: 15rem; background-color: aqua;">
+                                    <img src="images/new_case.png" class="align-items-center justify-content-center img-fluid pt-3" style="height: 100px; width: 100px;" alt="ini foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title pt-3" style="text-align: center;">New Cases</h5>
+                                        <p class="card-text pt-3" style="text-align: center;" data-stat="new-cases">-</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center" data-title="Recovered-Cases">
+                                <div class="card h-90 mt-4 rounded align-items-center justify-content-center" style="width: 15rem; background-color: aquamarine;">
+                                    <img src="images/recovered.png" class="align-items-center justify-content-center img-fluid pt-3" style="height: 100px; width: 100px;" alt="ini foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title pt-3" style="text-align: center;">Recovered Cases</h5>
+                                        <p class="card-text pt-3" style="text-align: center;" data-stat="recovered-cases">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 d-flex justify-content-center align-items-center" data-title="Total-Cases">
+                                <div class="card h-90 mt-4 rounded align-items-center justify-content-center" style="width: 15rem; background-color: lightseagreen;">
+                                    <img src="images/total.png" class="align-items-center justify-content-center img-fluid pt-3" style="height: 100px; width: 100px;" alt="ini foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title pt-3" style="text-align: center;">Total Cases</h5>
+                                        <p class="card-text pt-3" style="text-align: center;" data-stat="total-cases">-</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center" data-title="Total-Death">
+                                <div class="card h-90 mt-4 rounded align-items-center justify-content-center" style="width: 15rem; background-color: lightgreen;">
+                                    <img src="images/death_case.png" class="align-items-center justify-content-center img-fluid pt-3" style="height: 100px; width: 100px;" alt="ini foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title pt-3" style="text-align: center;">Total Death</h5>
+                                        <p class="card-text pt-3" style="text-align: center;" data-stat="total-death">-</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center" data-title="Total-Test">
+                                <div class="card h-90 mt-4 rounded align-items-center justify-content-center" style="width: 15rem; background-color: lightsteelblue;">
+                                    <img src="images/test_cast.png" class="align-items-center justify-content-center img-fluid pt-3" style="height: 100px; width: 100px;" alt="ini foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title pt-3" style="text-align: center;">Total Test</h5>
+                                        <p class="card-text pt-3" style="text-align: center;" data-stat="total-test">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
